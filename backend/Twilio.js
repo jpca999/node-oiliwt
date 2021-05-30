@@ -1,5 +1,4 @@
-const Twilio = require('twilio');
-
+const twilio = require('twilio');
 
 class Twilio{
     phoneNumber= '+19095528238'; 
@@ -16,6 +15,14 @@ class Twilio{
     }
         getTwilio(){
             this.client;
+        }
+    async  sendVerifyAsync(to, channel){
+           const data = await this.client.verify.services(this.verify).verifications.create({
+                to,
+                channel
+            }); 
+            console.log('sendVerify = ', data); 
+            return data;
         }
 }
 const instance = new Twilio()
