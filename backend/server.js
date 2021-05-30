@@ -14,6 +14,11 @@ app.get('/verify', (req, res) =>{
     res.send('verifying')
 }); 
 
+
+console.log(' process.env=', process.env.MOBILE); 
+
 app.listen(PORT, () =>{
     console.log(' port listneing.on 4000 ')
 }); 
+
+

@@ -9,9 +9,9 @@
   "scripts": {
     "start": "nodemon server.js"
   }, 
-  "nodeConfig": {
+  "nodemonConfig": {
     "env": {
-      "MOBILE": '555'
+      "MOBILE": "555"
     }
   }
 }
