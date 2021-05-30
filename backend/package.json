@@ -8,5 +8,10 @@
   },
   "scripts": {
     "start": "nodemon server.js"
+  }, 
+  "nodeConfig": {
+    "env": {
+      "MOBILE": '555'
+    }
   }
 }
