@@ -4,30 +4,8 @@ const app = express();
 
 const PORT = 4000;
 
-app.get('/test', (req, res) =>{
-    res.send('welcome to express')
-}); 
 
-app.get('/login', async (req, res) =>{
-    console.log('logging in');
-    const data = await twilio.sendVerifyAsync(process.env.MOBILE, 'sms')
-    res.send(data)
-
-}); 
-
-app.get('/verify', async (req, res) =>{
-    console.log('verifying');
-    const data = await twilio.verifyCodeAsync(process.env.MOBILE, req.query.code);
-    return data;
-    // res.send('verifying')
-}); 
-
-
-
-// console.log('process.env.tokenSid =', process.env.tokenSid); 
-
-console.log('process.env.test =', process.env.test); 
-
+// console.log('process.env.tokenSid =', process.env.test); 
 
 const TMSG = require('twilio')(
     'SK3089b959a87b143da11071b9014c6541', 
