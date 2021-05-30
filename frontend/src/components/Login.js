@@ -1,12 +1,13 @@
 // import './App.css';
+import { Grid }from 'semantic-ui-react';
 import React from 'react';
 
 function Login() {
     return (
-      <div className="App">
-        Helo from Twilio  ( Login page ) 
-      </div>
-    );
+    <Grid>
+        helo
+
+    </Grid>)
   }
   
   export default Login;
